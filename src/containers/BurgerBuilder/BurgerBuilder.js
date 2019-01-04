@@ -32,7 +32,7 @@ class BurgerBuilder extends Component {
       .reduce((sum, el) => {
         return sum + el
       },0)
-
+      this.setState({purchaseble: sum > 0})
   }
 
   addIngredientHandler = (type) => {
@@ -83,6 +83,7 @@ class BurgerBuilder extends Component {
         <BuildControls
           ingredientAdded={this.addIngredientHandler}
           ingredientRemoved={this.removeIngredientHandler}
+          purchaseble={this.state.purchaseble}
           disabled={disableInfo}
           price={this.state.totalPrice}
         />
