@@ -21,6 +21,20 @@ class BurgerBuilder extends Component {
     purchaseble: false
   }
 
+  updatePurchaseState() {
+    const ingredients = {
+      ...this.state.ingredients
+    }
+    const sum = Object.keys(ingredients)
+      .map(igKey => {
+        return ingredients[igKey]
+      })
+      .reduce((sum, el) => {
+        return sum + el
+      },0)
+
+  }
+
   addIngredientHandler = (type) => {
     const oldCount = this.state.ingredients[type]
     const updatedCount= oldCount + 1
