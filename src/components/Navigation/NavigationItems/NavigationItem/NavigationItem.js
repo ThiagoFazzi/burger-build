@@ -1,7 +1,8 @@
 import React from 'react'
+import classes from './NavigationItem.module.css'
 
 const navigationItem = (props) => (
-  <li>
+  <li className={classes.NavigationItem}>
     <a href={} ></a>
   </li>
 )
