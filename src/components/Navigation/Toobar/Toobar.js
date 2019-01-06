@@ -7,7 +7,9 @@ const toobar = (props) => (
   <header className={classes.Toobar}>
     <div>MENU</div>
     <Logo />
+    <nav>
     <NavigationItems />
+    </nav>
   </header>
 )
 
