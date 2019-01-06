@@ -9,8 +9,8 @@ const toobar = (props) => (
     <div className={classes.Logo}>
       <Logo />
     </div>
-    <nav>
-    <NavigationItems />
+    <nav className={classes.DesktopOnly}>
+      <NavigationItems />
     </nav>
   </header>
 )
